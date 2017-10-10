@@ -2,9 +2,9 @@ Module: waitwnt
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 00000003 bytes
-0000				wait_:
-0000  31 C0				xor		eax,eax
-0002  C3				ret		
+0000                            wait_:
+0000  31 C0                             xor             eax,eax
+0002  C3                                ret
 
 Routine Size: 3 bytes,    Routine Base: _TEXT + 0000
 

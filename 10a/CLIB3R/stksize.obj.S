@@ -12,6 +12,6 @@ Segment: CONST DWORD USE32 00000000 bytes
 Segment: CONST2 DWORD USE32 00000000 bytes
 
 Segment: _DATA DWORD USE32 00000004 bytes
-0000				__stacksize:
+0000                            __stacksize:
 0000  00 08 00 00                                     ....
 

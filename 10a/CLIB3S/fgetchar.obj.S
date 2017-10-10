@@ -2,11 +2,11 @@ Module: fgetchar
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 0000000E bytes
-0000				fgetchar:
-0000  68 00 00 00 00			push		offset __iob
-0005  E8 00 00 00 00			call		fgetc
-000A  83 C4 04				add		esp,0x00000004
-000D  C3				ret		
+0000                            fgetchar:
+0000  68 00 00 00 00                    push            offset __iob
+0005  E8 00 00 00 00                    call            fgetc
+000A  83 C4 04                          add             esp,0x00000004
+000D  C3                                ret
 
 Routine Size: 14 bytes,    Routine Base: _TEXT + 0000
 

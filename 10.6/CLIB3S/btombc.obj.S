@@ -2,106 +2,106 @@ Module: btombc
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 000000F2 bytes
-0000				_mbbtombc:
-0000  53				push		ebx
-0001  8B 54 24 08			mov		edx,dword ptr 0x8[esp]
-0005  8B 1D 00 00 00 00			mov		ebx,dword ptr __IsDBCS
-000B  85 DB				test		ebx,ebx
-000D  0F 84 7A 00 00 00			je		L$6
-0013  74 12				je		L$1
-0015  31 C0				xor		eax,eax
-0017  88 D0				mov		al,dl
-0019  8A 80 01 00 00 00			mov		al,byte ptr __MBCSIsTable+0x1[eax]
-001F  31 DB				xor		ebx,ebx
-0021  24 0C				and		al,0x0c
-0023  88 C3				mov		bl,al
-0025  EB 2E				jmp		L$3
-0027				L$1:
-0027  88 D0				mov		al,dl
-0029  FE C0				inc		al
-002B  25 FF 00 00 00			and		eax,0x000000ff
-0030  8A 98 00 00 00 00			mov		bl,byte ptr _IsTable[eax]
-0036  80 E3 C0				and		bl,0xc0
-0039  81 E3 FF 00 00 00			and		ebx,0x000000ff
-003F  75 0F				jne		L$2
-0041  8A 80 00 00 00 00			mov		al,byte ptr _IsTable[eax]
-0047  24 04				and		al,0x04
-0049  25 FF 00 00 00			and		eax,0x000000ff
-004E  74 05				je		L$3
-0050				L$2:
-0050  BB 01 00 00 00			mov		ebx,0x00000001
-0055				L$3:
-0055  89 D0				mov		eax,edx
-0057  C1 E0 02				shl		eax,0x02
-005A  85 DB				test		ebx,ebx
-005C  74 08				je		L$4
-005E  8B 80 7C FD FF FF			mov		eax,dword ptr KANAtoDBCS-0x284[eax]
-0064  5B				pop		ebx
-0065  C3				ret		
-0066				L$4:
-0066  88 D3				mov		bl,dl
-0068  FE C3				inc		bl
-006A  81 E3 FF 00 00 00			and		ebx,0x000000ff
-0070  8A 9B 00 00 00 00			mov		bl,byte ptr _IsTable[ebx]
-0076  80 E3 08				and		bl,0x08
-0079  81 E3 FF 00 00 00			and		ebx,0x000000ff
-007F  74 08				je		L$5
-0081  8B 80 80 FF FF FF			mov		eax,dword ptr ASCIItoDBCS-0x80[eax]
-0087  5B				pop		ebx
-0088  C3				ret		
-0089				L$5:
-0089  89 D0				mov		eax,edx
-008B  5B				pop		ebx
-008C  C3				ret		
-008D				L$6:
-008D  89 D0				mov		eax,edx
-008F  5B				pop		ebx
-0090  C3				ret		
+0000                            _mbbtombc:
+0000  53                                push            ebx
+0001  8B 54 24 08                       mov             edx,dword ptr 0x8[esp]
+0005  8B 1D 00 00 00 00                 mov             ebx,dword ptr __IsDBCS
+000B  85 DB                             test            ebx,ebx
+000D  0F 84 7A 00 00 00                 je              L$6
+0013  74 12                             je              L$1
+0015  31 C0                             xor             eax,eax
+0017  88 D0                             mov             al,dl
+0019  8A 80 01 00 00 00                 mov             al,byte ptr __MBCSIsTable+0x1[eax]
+001F  31 DB                             xor             ebx,ebx
+0021  24 0C                             and             al,0x0c
+0023  88 C3                             mov             bl,al
+0025  EB 2E                             jmp             L$3
+0027                            L$1:
+0027  88 D0                             mov             al,dl
+0029  FE C0                             inc             al
+002B  25 FF 00 00 00                    and             eax,0x000000ff
+0030  8A 98 00 00 00 00                 mov             bl,byte ptr _IsTable[eax]
+0036  80 E3 C0                          and             bl,0xc0
+0039  81 E3 FF 00 00 00                 and             ebx,0x000000ff
+003F  75 0F                             jne             L$2
+0041  8A 80 00 00 00 00                 mov             al,byte ptr _IsTable[eax]
+0047  24 04                             and             al,0x04
+0049  25 FF 00 00 00                    and             eax,0x000000ff
+004E  74 05                             je              L$3
+0050                            L$2:
+0050  BB 01 00 00 00                    mov             ebx,0x00000001
+0055                            L$3:
+0055  89 D0                             mov             eax,edx
+0057  C1 E0 02                          shl             eax,0x02
+005A  85 DB                             test            ebx,ebx
+005C  74 08                             je              L$4
+005E  8B 80 7C FD FF FF                 mov             eax,dword ptr KANAtoDBCS-0x284[eax]
+0064  5B                                pop             ebx
+0065  C3                                ret
+0066                            L$4:
+0066  88 D3                             mov             bl,dl
+0068  FE C3                             inc             bl
+006A  81 E3 FF 00 00 00                 and             ebx,0x000000ff
+0070  8A 9B 00 00 00 00                 mov             bl,byte ptr _IsTable[ebx]
+0076  80 E3 08                          and             bl,0x08
+0079  81 E3 FF 00 00 00                 and             ebx,0x000000ff
+007F  74 08                             je              L$5
+0081  8B 80 80 FF FF FF                 mov             eax,dword ptr ASCIItoDBCS-0x80[eax]
+0087  5B                                pop             ebx
+0088  C3                                ret
+0089                            L$5:
+0089  89 D0                             mov             eax,edx
+008B  5B                                pop             ebx
+008C  C3                                ret
+008D                            L$6:
+008D  89 D0                             mov             eax,edx
+008F  5B                                pop             ebx
+0090  C3                                ret
 
 Routine Size: 145 bytes,    Routine Base: _TEXT + 0000
 
-0091				_mbctombb:
-0091  53				push		ebx
-0092  8B 54 24 08			mov		edx,dword ptr 0x8[esp]
-0096  83 3D 00 00 00 00 00		cmp		dword ptr __IsDBCS,0x00000000
-009D  74 4F				je		L$12
-009F  81 FA FF 00 00 00			cmp		edx,0x000000ff
-00A5  72 47				jb		L$12
-00A7  31 DB				xor		ebx,ebx
-00A9  31 C0				xor		eax,eax
-00AB				L$7:
-00AB  3B 90 00 00 00 00			cmp		edx,dword ptr ASCIItoDBCS[eax]
-00B1  75 07				jne		L$8
-00B3  8D 53 20				lea		edx,0x20[ebx]
-00B6  89 D0				mov		eax,edx
-00B8  5B				pop		ebx
-00B9  C3				ret		
-00BA				L$8:
-00BA  83 C0 04				add		eax,0x00000004
-00BD  43				inc		ebx
-00BE  3D 78 01 00 00			cmp		eax,0x00000178
-00C3  7E E6				jle		L$7
-00C5  31 DB				xor		ebx,ebx
-00C7  31 C0				xor		eax,eax
-00C9				L$9:
-00C9  3B 90 00 00 00 00			cmp		edx,dword ptr KANAtoDBCS[eax]
-00CF  74 08				je		L$10
-00D1  3B 90 04 00 00 00			cmp		edx,dword ptr KANAtoDBCS+0x4[eax]
-00D7  73 0A				jae		L$11
-00D9				L$10:
-00D9  8D 93 A1 00 00 00			lea		edx,0xa1[ebx]
-00DF  89 D0				mov		eax,edx
-00E1  5B				pop		ebx
-00E2  C3				ret		
-00E3				L$11:
-00E3  83 C0 04				add		eax,0x00000004
-00E6  43				inc		ebx
-00E7  3D F8 00 00 00			cmp		eax,0x000000f8
-00EC  7E DB				jle		L$9
-00EE				L$12:
-00EE  89 D0				mov		eax,edx
-00F0  5B				pop		ebx
-00F1  C3				ret		
+0091                            _mbctombb:
+0091  53                                push            ebx
+0092  8B 54 24 08                       mov             edx,dword ptr 0x8[esp]
+0096  83 3D 00 00 00 00 00              cmp             dword ptr __IsDBCS,0x00000000
+009D  74 4F                             je              L$12
+009F  81 FA FF 00 00 00                 cmp             edx,0x000000ff
+00A5  72 47                             jb              L$12
+00A7  31 DB                             xor             ebx,ebx
+00A9  31 C0                             xor             eax,eax
+00AB                            L$7:
+00AB  3B 90 00 00 00 00                 cmp             edx,dword ptr ASCIItoDBCS[eax]
+00B1  75 07                             jne             L$8
+00B3  8D 53 20                          lea             edx,0x20[ebx]
+00B6  89 D0                             mov             eax,edx
+00B8  5B                                pop             ebx
+00B9  C3                                ret
+00BA                            L$8:
+00BA  83 C0 04                          add             eax,0x00000004
+00BD  43                                inc             ebx
+00BE  3D 78 01 00 00                    cmp             eax,0x00000178
+00C3  7E E6                             jle             L$7
+00C5  31 DB                             xor             ebx,ebx
+00C7  31 C0                             xor             eax,eax
+00C9                            L$9:
+00C9  3B 90 00 00 00 00                 cmp             edx,dword ptr KANAtoDBCS[eax]
+00CF  74 08                             je              L$10
+00D1  3B 90 04 00 00 00                 cmp             edx,dword ptr KANAtoDBCS+0x4[eax]
+00D7  73 0A                             jae             L$11
+00D9                            L$10:
+00D9  8D 93 A1 00 00 00                 lea             edx,0xa1[ebx]
+00DF  89 D0                             mov             eax,edx
+00E1  5B                                pop             ebx
+00E2  C3                                ret
+00E3                            L$11:
+00E3  83 C0 04                          add             eax,0x00000004
+00E6  43                                inc             ebx
+00E7  3D F8 00 00 00                    cmp             eax,0x000000f8
+00EC  7E DB                             jle             L$9
+00EE                            L$12:
+00EE  89 D0                             mov             eax,edx
+00F0  5B                                pop             ebx
+00F1  C3                                ret
 
 Routine Size: 97 bytes,    Routine Base: _TEXT + 0091
 
@@ -112,7 +112,7 @@ Segment: CONST DWORD USE32 00000000 bytes
 Segment: CONST2 DWORD USE32 00000000 bytes
 
 Segment: _DATA DWORD USE32 00000278 bytes
-0000				ASCIItoDBCS:
+0000                            ASCIItoDBCS:
 0000  40 81 00 00 49 81 00 00 68 81 00 00 94 81 00 00 @...I...h.......
 0010  90 81 00 00 93 81 00 00 95 81 00 00 66 81 00 00 ............f...
 0020  69 81 00 00 6A 81 00 00 96 81 00 00 7B 81 00 00 i...j.......{...
@@ -137,7 +137,7 @@ Segment: _DATA DWORD USE32 00000278 bytes
 0150  94 82 00 00 95 82 00 00 96 82 00 00 97 82 00 00 ................
 0160  98 82 00 00 99 82 00 00 9A 82 00 00 6F 81 00 00 ............o...
 0170  62 81 00 00 70 81 00 00 50 81 00 00             b...p...P...
-017C				KANAtoDBCS:
+017C                            KANAtoDBCS:
 017C  42 81 00 00 75 81 00 00 76 81 00 00 41 81 00 00 B...u...v...A...
 018C  45 81 00 00 92 83 00 00 40 83 00 00 42 83 00 00 E.......@...B...
 019C  44 83 00 00 46 83 00 00 48 83 00 00 83 83 00 00 D...F...H.......

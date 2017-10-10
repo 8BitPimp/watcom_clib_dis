@@ -2,11 +2,11 @@ Module: delaywnt
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 0000000B bytes
-0000				delay:
-0000  8B 54 24 04			mov		edx,dword ptr 0x4[esp]
-0004  52				push		edx
-0005  E8 00 00 00 00			call		_Sleep
-000A  C3				ret		
+0000                            delay:
+0000  8B 54 24 04                       mov             edx,dword ptr 0x4[esp]
+0004  52                                push            edx
+0005  E8 00 00 00 00                    call            _Sleep
+000A  C3                                ret
 
 Routine Size: 11 bytes,    Routine Base: _TEXT + 0000
 

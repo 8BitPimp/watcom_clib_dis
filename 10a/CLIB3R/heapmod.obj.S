@@ -14,8 +14,8 @@ Segment: CONST2 DWORD USE32 00000000 bytes
 Segment: _DATA DWORD USE32 00000000 bytes
 
 Segment: _BSS DWORD USE32 00000002 bytes
-0000				___fheap_clean:
-0001				___nheap_clean:
+0000                            ___fheap_clean:
+0001                            ___nheap_clean:
 
 BSS Size: 2 bytes
 

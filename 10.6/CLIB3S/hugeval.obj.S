@@ -10,7 +10,7 @@ No disassembly errors
 Segment: CONST DWORD USE32 00000000 bytes
 
 Segment: CONST2 DWORD USE32 00000008 bytes
-0000				_HugeValue:
+0000                            _HugeValue:
 0000  00 00 00 00 00 00 F0 7F                         ........
 
 Segment: _DATA DWORD USE32 00000000 bytes

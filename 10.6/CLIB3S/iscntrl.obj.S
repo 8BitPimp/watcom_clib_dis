@@ -2,12 +2,12 @@ Module: iscntrl
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 00000012 bytes
-0000				iscntrl:
-0000  8B 44 24 04			mov		eax,dword ptr 0x4[esp]
-0004  8A 80 01 00 00 00			mov		al,byte ptr _IsTable+0x1[eax]
-000A  24 01				and		al,0x01
-000C  25 FF 00 00 00			and		eax,0x000000ff
-0011  C3				ret		
+0000                            iscntrl:
+0000  8B 44 24 04                       mov             eax,dword ptr 0x4[esp]
+0004  8A 80 01 00 00 00                 mov             al,byte ptr _IsTable+0x1[eax]
+000A  24 01                             and             al,0x01
+000C  25 FF 00 00 00                    and             eax,0x000000ff
+0011  C3                                ret
 
 Routine Size: 18 bytes,    Routine Base: _TEXT + 0000
 

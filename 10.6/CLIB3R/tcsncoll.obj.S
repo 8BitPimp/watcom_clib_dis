@@ -2,8 +2,8 @@ Module: tcsncoll
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 00000005 bytes
-0000				_tcsncoll_:
-0000  E9 00 00 00 00			jmp		_mbsnbcmp_
+0000                            _tcsncoll_:
+0000  E9 00 00 00 00                    jmp             _mbsnbcmp_
 
 Routine Size: 5 bytes,    Routine Base: _TEXT + 0000
 

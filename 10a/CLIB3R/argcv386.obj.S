@@ -8,16 +8,16 @@ Routine Size: 0 bytes,    Routine Base: _TEXT + 0000
 No disassembly errors
 
 Segment: _DATA DWORD USE32 00000008 bytes
-0000				__argc:
+0000                            __argc:
 0000  00 00 00 00                                     ....
-0004				__argv:
+0004                            __argv:
 0004  00 00 00 00                                     ....
 
 Segment: XIB WORD USE32 00000000 bytes
 
 Segment: XI WORD USE32 00000006 bytes
-0000  00 20                                           . 
-0002  00 00 00 00                                     DD	offset __Init_Argv_
+0000  00 20                                           .
+0002  00 00 00 00                                     DD        offset __Init_Argv_
 
 Segment: XIE WORD USE32 00000000 bytes
 

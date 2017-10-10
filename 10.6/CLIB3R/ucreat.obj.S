@@ -2,13 +2,13 @@ Module: ucreat
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 0000000D bytes
-0000				_ucreat_:
-0000  52				push		edx
-0001  6A 62				push		0x00000062
-0003  50				push		eax
-0004  E8 00 00 00 00			call		_uopen_
-0009  83 C4 0C				add		esp,0x0000000c
-000C  C3				ret		
+0000                            _ucreat_:
+0000  52                                push            edx
+0001  6A 62                             push            0x00000062
+0003  50                                push            eax
+0004  E8 00 00 00 00                    call            _uopen_
+0009  83 C4 0C                          add             esp,0x0000000c
+000C  C3                                ret
 
 Routine Size: 13 bytes,    Routine Base: _TEXT + 0000
 

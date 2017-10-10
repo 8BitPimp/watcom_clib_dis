@@ -2,9 +2,9 @@ Module: fgetchar
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 0000000A bytes
-0000				fgetchar_:
-0000  B8 00 00 00 00			mov		eax,offset ___iob
-0005  E9 00 00 00 00			jmp		fgetc_
+0000                            fgetchar_:
+0000  B8 00 00 00 00                    mov             eax,offset ___iob
+0005  E9 00 00 00 00                    jmp             fgetc_
 
 Routine Size: 10 bytes,    Routine Base: _TEXT + 0000
 

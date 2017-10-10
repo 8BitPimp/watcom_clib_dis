@@ -2,11 +2,11 @@ Module: inp
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 00000008 bytes
-0000				inp:
-0000  8B 54 24 04			mov		edx,dword ptr 0x4[esp]
-0004  29 C0				sub		eax,eax
-0006  EC				in		al,dx
-0007  C3				ret		
+0000                            inp:
+0000  8B 54 24 04                       mov             edx,dword ptr 0x4[esp]
+0004  29 C0                             sub             eax,eax
+0006  EC                                in              al,dx
+0007  C3                                ret
 
 Routine Size: 8 bytes,    Routine Base: _TEXT + 0000
 

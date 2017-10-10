@@ -2,8 +2,8 @@ Module: tcsstr
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 00000005 bytes
-0000				_tcsstr_:
-0000  E9 00 00 00 00			jmp		_mbsstr_
+0000                            _tcsstr_:
+0000  E9 00 00 00 00                    jmp             _mbsstr_
 
 Routine Size: 5 bytes,    Routine Base: _TEXT + 0000
 

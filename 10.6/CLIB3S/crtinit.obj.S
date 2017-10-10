@@ -2,9 +2,9 @@ Module: crtinit
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 00000008 bytes
-0000				__CRT_INIT@12:
-0000  B8 01 00 00 00			mov		eax,0x00000001
-0005  C2 0C 00				ret		0x000c
+0000                            __CRT_INIT@12:
+0000  B8 01 00 00 00                    mov             eax,0x00000001
+0005  C2 0C 00                          ret             0x000c
 
 Routine Size: 8 bytes,    Routine Base: _TEXT + 0000
 

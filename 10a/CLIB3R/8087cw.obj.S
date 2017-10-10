@@ -12,6 +12,6 @@ Segment: CONST DWORD USE32 00000000 bytes
 Segment: CONST2 DWORD USE32 00000000 bytes
 
 Segment: _DATA DWORD USE32 00000002 bytes
-0000				__8087cw:
+0000                            __8087cw:
 0000  7F 12                                           ..
 

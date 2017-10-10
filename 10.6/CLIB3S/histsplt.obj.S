@@ -14,7 +14,7 @@ Segment: CONST2 DWORD USE32 00000000 bytes
 Segment: _DATA DWORD USE32 00000000 bytes
 
 Segment: _BSS DWORD USE32 00000004 bytes
-0000				__historical_splitparms:
+0000                            __historical_splitparms:
 
 BSS Size: 4 bytes
 

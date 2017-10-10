@@ -2,11 +2,11 @@ Module: ugetc
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 00000005 bytes
-0000				_ugetc:
-0000  55				push		ebp
-0001  89 E5				mov		ebp,esp
-0003				L$1:
-0003  EB FE				jmp		L$1
+0000                            _ugetc:
+0000  55                                push            ebp
+0001  89 E5                             mov             ebp,esp
+0003                            L$1:
+0003  EB FE                             jmp             L$1
 
 Routine Size: 5 bytes,    Routine Base: _TEXT + 0000
 

@@ -2,28 +2,28 @@ Module: strlwr
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 0000001F bytes
-0000				_strlwr_:
-0000				strlwr_:
-0000  53				push		ebx
-0001  52				push		edx
-0002  89 C3				mov		ebx,eax
-0004				L$1:
-0004  8A 10				mov		dl,byte ptr [eax]
-0006  84 D2				test		dl,dl
-0008  74 10				je		L$3
-000A  80 EA 41				sub		dl,0x41
-000D  80 FA 19				cmp		dl,0x19
-0010  77 05				ja		L$2
-0012  80 C2 61				add		dl,0x61
-0015  88 10				mov		byte ptr [eax],dl
-0017				L$2:
-0017  40				inc		eax
-0018  EB EA				jmp		L$1
-001A				L$3:
-001A  89 D8				mov		eax,ebx
-001C  5A				pop		edx
-001D  5B				pop		ebx
-001E  C3				ret		
+0000                            _strlwr_:
+0000                            strlwr_:
+0000  53                                push            ebx
+0001  52                                push            edx
+0002  89 C3                             mov             ebx,eax
+0004                            L$1:
+0004  8A 10                             mov             dl,byte ptr [eax]
+0006  84 D2                             test            dl,dl
+0008  74 10                             je              L$3
+000A  80 EA 41                          sub             dl,0x41
+000D  80 FA 19                          cmp             dl,0x19
+0010  77 05                             ja              L$2
+0012  80 C2 61                          add             dl,0x61
+0015  88 10                             mov             byte ptr [eax],dl
+0017                            L$2:
+0017  40                                inc             eax
+0018  EB EA                             jmp             L$1
+001A                            L$3:
+001A  89 D8                             mov             eax,ebx
+001C  5A                                pop             edx
+001D  5B                                pop             ebx
+001E  C3                                ret
 
 Routine Size: 31 bytes,    Routine Base: _TEXT + 0000
 

@@ -2,12 +2,12 @@ Module: tcsupr
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 0000000E bytes
-0000				_tcsupr:
-0000  8B 54 24 04			mov		edx,dword ptr 0x4[esp]
-0004  52				push		edx
-0005  E8 00 00 00 00			call		_mbsupr
-000A  83 C4 04				add		esp,0x00000004
-000D  C3				ret		
+0000                            _tcsupr:
+0000  8B 54 24 04                       mov             edx,dword ptr 0x4[esp]
+0004  52                                push            edx
+0005  E8 00 00 00 00                    call            _mbsupr
+000A  83 C4 04                          add             esp,0x00000004
+000D  C3                                ret
 
 Routine Size: 14 bytes,    Routine Base: _TEXT + 0000
 

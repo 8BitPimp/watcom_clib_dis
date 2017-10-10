@@ -2,12 +2,12 @@ Module: rotl
 GROUP: 'DGROUP' CONST,CONST2,_DATA,_BSS
 
 Segment: _TEXT BYTE USE32 00000007 bytes
-0000				_rotl_:
-0000  51				push		ecx
-0001  89 D1				mov		ecx,edx
-0003  D3 C0				rol		eax,cl
-0005  59				pop		ecx
-0006  C3				ret		
+0000                            _rotl_:
+0000  51                                push            ecx
+0001  89 D1                             mov             ecx,edx
+0003  D3 C0                             rol             eax,cl
+0005  59                                pop             ecx
+0006  C3                                ret
 
 Routine Size: 7 bytes,    Routine Base: _TEXT + 0000
 

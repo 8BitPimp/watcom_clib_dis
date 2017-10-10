@@ -12,7 +12,7 @@ Segment: CONST DWORD USE32 00000000 bytes
 Segment: CONST2 DWORD USE32 00000000 bytes
 
 Segment: _DATA DWORD USE32 00000211 bytes
-0000				___iob:
+0000                            ___iob:
 0000  00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 ................
 0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
 0020  00 00 00 00 00 00 02 00 00 00 01 00 00 00 00 00 ................
@@ -22,17 +22,17 @@ Segment: _DATA DWORD USE32 00000211 bytes
 0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
 0070  00 00 00 00 02 00 00 00 04 00 00 00 00 00 00 00 ................
 0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
-	--- Above line repeats 23 times ---
+        --- Above line repeats 23 times ---
 0200  00 00 00 00 00 00 00 00                         ........
-0208				___tmpfnext:
+0208                            ___tmpfnext:
 0208  61                                              a
-0209				__fmode:
+0209                            __fmode:
 0209  00 01 00 00                                     ....
-020D				_force:
-020D  00 00 00 00                                     DD	offset ___OpenStreams
+020D                            _force:
+020D  00 00 00 00                                     DD        offset ___OpenStreams
 
 Segment: _BSS DWORD USE32 00000004 bytes
-0000				___ClosedStreams:
+0000                            ___ClosedStreams:
 
 BSS Size: 4 bytes
 

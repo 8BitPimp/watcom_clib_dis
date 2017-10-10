@@ -2,9 +2,9 @@ Module: enable
 GROUP: 'DGROUP' CONST,CONST2,_DATA
 
 Segment: _TEXT BYTE USE32 00000002 bytes
-0000				_enable_:
-0000  FB				sti		
-0001  C3				ret		
+0000                            _enable_:
+0000  FB                                sti
+0001  C3                                ret
 
 Routine Size: 2 bytes,    Routine Base: _TEXT + 0000
 

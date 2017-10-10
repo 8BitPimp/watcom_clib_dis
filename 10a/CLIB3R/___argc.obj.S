@@ -14,8 +14,8 @@ Segment: CONST2 DWORD USE32 00000000 bytes
 Segment: _DATA DWORD USE32 00000000 bytes
 
 Segment: _BSS DWORD USE32 00000008 bytes
-0000				____Argc:
-0004				____Argv:
+0000                            ____Argc:
+0004                            ____Argv:
 
 BSS Size: 8 bytes
 
